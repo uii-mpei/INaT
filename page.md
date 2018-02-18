@@ -46,10 +46,11 @@ lang: ru-RU
 
 Повторение C++ (работа с памятью).  Сборка приложений, использующий API сокетов.
 
-- [MinGW][mingw] — компилятор GCC 7.2 для Windows.
+- MinGW ([32 бита][gcc32], [64 бита][gcc64]) — компилятор GCC 7.2 для Windows.
 - [CodeBlocks](http://www.codeblocks.org/downloads/26) — легковесная IDE.
 
-[mingw]: https://sf.net/p/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
+[gcc32]: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/7.2.0/threads-posix/sjlj/i686-7.2.0-release-posix-sjlj-rt_v5-rev1.7z
+[gcc64]: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.2.0/threads-posix/sjlj/x86_64-7.2.0-release-posix-sjlj-rt_v5-rev1.7z
 
 
 ### 3. Блокирующие UDP-сокеты

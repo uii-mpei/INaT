@@ -36,15 +36,15 @@ lang: ru-RU
 
 [Регламент](rules.html), в том числе правила оформления отчетов.
 
-### 1. [Средства диагностики сетей](lab01-tools.html)
+### 1. (08.02) [Средства диагностики сетей](lab01-tools.html)
 
 - [Wireshark](https://www.wireshark.org/#download) —
     анализатор сетевого трафика.
 
 
-### 2. [Приемы программирования сетевых приложений](lab02-api.html)
+### 2. (16.02) [Приемы программирования сетевых приложений](lab02-api.html)
 
-Повторение C++ (работа с памятью).  Сборка приложений, использующий API сокетов.
+Повторение C++ (работа с памятью).  Сборка приложений, использующих API сокетов.
 
 - MinGW ([32 бита][gcc32], [64 бита][gcc64]) — компилятор GCC 7.2 для Windows.
 - [CodeBlocks](http://www.codeblocks.org/downloads/26) — легковесная IDE.
@@ -53,15 +53,35 @@ lang: ru-RU
 [gcc64]: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.2.0/threads-posix/sjlj/x86_64-7.2.0-release-posix-sjlj-rt_v5-rev1.7z
 
 
-### 3. Блокирующие UDP-сокеты
+###   (02.03) Занятие для защит
+
+### 3. (16.03) Блокирующие UDP-сокеты
 
 Простейший обмен короткими сообщениями по сети.
 
 - [Nmap](https://nmap.org/) —
     набор программ для исследования и диагностики сети.
-    Для Linux можно использовать `netcat` (BSD) и `nmap`.
+    Для ЛР нужна `netcat` (`ncat`) — универсальный клиент и сервер TCP и UDP.
 
-Далее: TCP, двоичные протоколы, HTTP, криптография.
+### 4. (23.03) Блокирующие TCP-сокеты.  Клиент для передачи файлов
+
+### 5. (30.03) Блокирующие TCP-сокеты.  Сервер для передачи файлов
+
+###   (06.04) Занятие для защит
+
+### 6. (13.04) Асинхронное взаимодействие на базе потоков
+
+### 7. (20.04) Неблокирующий режим работы сокетов
+
+###   (27.04) Занятие для защит
+
+### 8. (04.05) Текстовые протоколы (HTTP)
+
+### 9. (11.05) Серверы web-приложений
+
+### 10. (18.05)  Криптография и TLS
+
+###    (25.05) Занятие для защит
 
 
 # Литература
@@ -86,6 +106,10 @@ lang: ru-RU
 # Связь
 
 * Дмитрий Козлюк, лектор и лаборант А-01-14:
-    «[ВКонтакте](https://vk.com/plushbeaver)», [почта][email]
+    «[ВКонтакте](https://vk.com/plushbeaver)», [почта][email/dk].
 
-[email]: http://www.google.com/recaptcha/mailhide/d?k=01_uWea10RK7AzO-a9C2nBjg==&c=nG5zSR4276ZYxX7ItHJb_A_Lzdt787hUjxLUG5R7rwY=
+* Борис Вишняков, лаборант А-02-14:
+    «[ВКонтакте](https://vk.com/zvinnyz)», [почта][email/bv].
+
+[email/dk]: http://www.google.com/recaptcha/mailhide/d?k=01_uWea10RK7AzO-a9C2nBjg==&c=nG5zSR4276ZYxX7ItHJb_A_Lzdt787hUjxLUG5R7rwY=
+[email/bv]: http://www.google.com/recaptcha/mailhide/d?k=01KLcfsSrFyXTv3zRsddFxew==&c=vtxI02xSbsmb6by9yirdMgL0fHIyAtLrG6-zn9Xmwv0=

@@ -4,8 +4,6 @@ lang: ru-RU
 
 ---
 
-<link rel="stylesheet" type="text/css" href="/study/courses/assets/styles/style.css">
-
 В курс входит:
 
 - стек протоколов TCP/IP и сопутствующих;

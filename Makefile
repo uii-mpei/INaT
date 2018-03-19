@@ -17,7 +17,9 @@ LECTURES = \
 	lecture02
 
 LABS = \
-	lab03
+	lab03 \
+	lab04 \
+	lab05
 
 .PHONY: $(LECTURES) $(LABS)
 
@@ -48,11 +50,39 @@ $(DST_DIR)/$(LEC02_DIR)/index.html: $(TMP_DIR)/$(LEC02_DIR)/lecture02-layer2.md.
 
 
 LAB03_DIR = lab/03-udp
+LAB03_FIGURES = \
+	linux.jpg
 
 lab03: \
-	$(DST_DIR)/$(LAB03_DIR)/index.html
+	$(DST_DIR)/$(LAB03_DIR)/index.html \
+	$(foreach file,$(LAB03_FIGURES),$(DST_DIR)/$(LAB03_DIR)/$(file))
 
 $(DST_DIR)/$(LAB03_DIR)/index.html: $(TMP_DIR)/$(LAB03_DIR)/lab03-udp.md.html
+	mkdir -p $(dir $@) && cp $^ $@
+
+
+LAB04_DIR = lab/04-tcp-client
+LAB04_FILES = \
+	lab05-tcp-server \
+	lab05-tcp-server.exe
+
+lab04: \
+	$(DST_DIR)/$(LAB04_DIR)/index.html \
+	$(foreach file,$(LAB04_FILES),$(DST_DIR)/$(LAB04_DIR)/$(file))
+
+$(DST_DIR)/$(LAB04_DIR)/index.html: $(TMP_DIR)/$(LAB04_DIR)/lab04-tcp-client.md.html
+	mkdir -p $(dir $@) && cp $^ $@
+
+
+LAB05_DIR = lab/05-tcp-server
+LAB05_FILES = \
+	listing.h
+
+lab05: \
+	$(DST_DIR)/$(LAB05_DIR)/index.html \
+	$(foreach file,$(LAB05_FILES),$(DST_DIR)/$(LAB05_DIR)/$(file))
+
+$(DST_DIR)/$(LAB05_DIR)/index.html: $(TMP_DIR)/$(LAB05_DIR)/lab05-tcp-server.md.html
 	mkdir -p $(dir $@) && cp $^ $@
 
 

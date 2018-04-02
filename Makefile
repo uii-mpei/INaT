@@ -76,7 +76,8 @@ $(DST_DIR)/$(LAB04_DIR)/index.html: $(TMP_DIR)/$(LAB04_DIR)/lab04-tcp-client.md.
 
 LAB05_DIR = lab/05-tcp-server
 LAB05_FILES = \
-	listing.h
+	listing.h \
+	listing_ex.h
 
 lab05: \
 	$(DST_DIR)/$(LAB05_DIR)/index.html \

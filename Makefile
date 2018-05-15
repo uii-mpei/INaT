@@ -19,7 +19,8 @@ LECTURES = \
 LABS = \
 	lab03 \
 	lab04 \
-	lab05
+	lab05 \
+	lab06
 
 .PHONY: $(LECTURES) $(LABS)
 
@@ -84,6 +85,19 @@ lab05: \
 	$(foreach file,$(LAB05_FILES),$(DST_DIR)/$(LAB05_DIR)/$(file))
 
 $(DST_DIR)/$(LAB05_DIR)/index.html: $(TMP_DIR)/$(LAB05_DIR)/lab05-tcp-server.md.html
+	mkdir -p $(dir $@) && cp $^ $@
+
+
+LAB06_DIR = lab/06-threaded-server
+LAB06_FILES = \
+	lab06-threaded-server.exe \
+	sync.h
+
+lab06: \
+	$(DST_DIR)/$(LAB06_DIR)/index.html \
+	$(foreach file,$(LAB06_FILES),$(DST_DIR)/$(LAB06_DIR)/$(file))
+
+$(DST_DIR)/$(LAB06_DIR)/index.html: $(TMP_DIR)/$(LAB06_DIR)/lab06-threaded-server.md.html
 	mkdir -p $(dir $@) && cp $^ $@
 
 

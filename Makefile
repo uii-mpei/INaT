@@ -20,7 +20,8 @@ LABS = \
 	lab03 \
 	lab04 \
 	lab05 \
-	lab06
+	lab06 \
+	lab07
 
 .PHONY: $(LECTURES) $(LABS)
 
@@ -98,6 +99,15 @@ lab06: \
 	$(foreach file,$(LAB06_FILES),$(DST_DIR)/$(LAB06_DIR)/$(file))
 
 $(DST_DIR)/$(LAB06_DIR)/index.html: $(TMP_DIR)/$(LAB06_DIR)/lab06-threaded-server.md.html
+	mkdir -p $(dir $@) && cp $^ $@
+
+
+LAB07_DIR = lab/07-nonblocking-server
+
+lab07: \
+	$(DST_DIR)/$(LAB07_DIR)/index.html
+
+$(DST_DIR)/$(LAB07_DIR)/index.html: $(TMP_DIR)/$(LAB07_DIR)/lab07-nonblocking-server.md.html
 	mkdir -p $(dir $@) && cp $^ $@
 
 

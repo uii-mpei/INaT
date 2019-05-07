@@ -21,11 +21,12 @@ LABS = \
 	lab04 \
 	lab05 \
 	lab06 \
-	lab07
+	lab07 \
+	lab08
 
 .PHONY: $(LECTURES) $(LABS)
 
-all: $(DST_DIR)/index.html $(LECTURES) $(LABS)
+all: $(DST_DIR)/index.html $(LECTURES) $(LABS) $(DST_DIR)/exam.html
 
 
 $(DST_DIR)/index.html: $(TMP_DIR)/page.md.html
@@ -109,6 +110,23 @@ lab07: \
 
 $(DST_DIR)/$(LAB07_DIR)/index.html: $(TMP_DIR)/$(LAB07_DIR)/lab07-nonblocking-server.md.html
 	mkdir -p $(dir $@) && cp $^ $@
+
+
+LAB08_DIR = lab/08-crypto
+LAB08_FILES = \
+	openvpn-server.conf \
+	openvpn-client.conf
+
+lab08: \
+	$(DST_DIR)/$(LAB08_DIR)/index.html \
+	$(foreach file,$(LAB08_FILES),$(DST_DIR)/$(LAB08_DIR)/$(file))
+
+$(DST_DIR)/$(LAB08_DIR)/index.html: $(TMP_DIR)/$(LAB08_DIR)/lab08-crypto.md.html
+	mkdir -p $(dir $@) && cp $^ $@
+
+
+$(DST_DIR)/exam.html: $(TMP_DIR)/exam.md.html
+	cp $< $@
 
 
 $(TMP_DIR)/%.md.html: $(SRC_DIR)/%.md $(SRC_DIR)/footer.html
